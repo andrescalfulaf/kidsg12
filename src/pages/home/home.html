@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agregar</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        Guardar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+  <ion-card>
+
+    <img src="assets/img/David.png"/>
+
+    <ion-card-content>
+      <ion-item>
+      <ion-label>Curso</ion-label>
+      <ion-select [(ngModel)]="curso" interface="action-sheet">
+        <ion-option value="3 a 4">Curso 3 a 4</ion-option>
+        <ion-option value="5 a 6">Curso 5 a 6</ion-option>
+        <ion-option value="7 a 9">Curso 7 a 9</ion-option>
+        <ion-option value="PRE JUVENILES">Curso PRE JUVENILES</ion-option>
+      </ion-select>
+    </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Nombre Completo</ion-label>
+        <ion-input  type="text" placeholder="Nombre Completo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Apoderado 1</ion-label>
+        <ion-input  type="text" placeholder="Apoderado 1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Fono Apoderado 1</ion-label>
+        <ion-input  type="number" placeholder="Apoderado 1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Apoderado 2</ion-label>
+        <ion-input  type="text" placeholder="Apoderado 2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Fono Apoderado 2</ion-label>
+        <ion-input  type="number" placeholder="Fono Apoderado 2"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

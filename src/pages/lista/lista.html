@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      Cursos
+    </ion-title>
+    
+  </ion-navbar>
+<ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="ninos">
+      <ion-segment-button value="si">
+        Ingresados
+      </ion-segment-button>
+      <ion-segment-button value="no">
+        No Ingresados
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div [ngSwitch]="ninos">
+<ion-list *ngSwitchCase="'no'">
+  <ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/img/David.png">
+    </ion-thumbnail>
+    <h2>Axel Calfulaf B</h2>
+    <p>Andres Calfulaf P</p>
+    <p>Jacqueline Obando D</p>
+    <ion-item>
+      <ion-row>
+    <ion-col col-4><ion-icon name="md-checkmark" item-left></ion-icon></ion-col>
+    <ion-col col-4> <ion-icon name="md-call" isActive="false" item-left></ion-icon>1</ion-col>
+    <ion-col col-4><ion-icon name="md-call" isActive="true" item-left></ion-icon>2</ion-col>
+  </ion-row>
+</ion-item>
+  </ion-item><ion-item>
+    <ion-thumbnail item-left>
+      <img src="assets/img/Ester.png">
+    </ion-thumbnail>
+    <h2>Amy Calfulaf O</h2>
+    <p>Andres Calfulaf P</p>
+    <p>Jacqueline Obando D</p>
+    <ion-item>
+      <ion-row>
+    <ion-col col-4><ion-icon name="md-checkmark" item-left></ion-icon></ion-col>
+    <ion-col col-4> <ion-icon name="md-call" isActive="false" item-left></ion-icon>1</ion-col>
+    <ion-col col-4><ion-icon name="md-call" isActive="true" item-left></ion-icon>2</ion-col>
+  </ion-row>
+</ion-item>
+  </ion-item>
+
+</ion-list>
+</div>
+</ion-content>
