@@ -6,49 +6,34 @@
     
   </ion-navbar>
 <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]="ninos">
-      <ion-segment-button value="si">
+    <ion-segment [(ngModel)]="ninosx">
+      <ion-segment-button value="true">
         Ingresados
       </ion-segment-button>
-      <ion-segment-button value="no">
+      <ion-segment-button value="false">
         No Ingresados
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-<div [ngSwitch]="ninos">
-<ion-list *ngSwitchCase="'no'">
-  <ion-item>
+<div [ngSwitch]="ninosx">
+<ion-list *ngFor="let item of ninos"  >
+  <ion-item *ngSwitchCase="item.estado"  >
     <ion-thumbnail item-left>
-      <img src="assets/img/David.png">
+      <img src="{{item.img}}">
     </ion-thumbnail>
-    <h2>Axel Calfulaf B</h2>
-    <p>Andres Calfulaf P</p>
-    <p>Jacqueline Obando D</p>
+    <h2>{{item.nombre}}</h2>
+    <p>{{item.ap1}}</p>
+    <p>{{item.ap2}}</p>
     <ion-item>
       <ion-row>
-    <ion-col col-4><ion-icon name="md-checkmark" item-left></ion-icon></ion-col>
-    <ion-col col-4> <ion-icon name="md-call" isActive="false" item-left></ion-icon>1</ion-col>
-    <ion-col col-4><ion-icon name="md-call" isActive="true" item-left></ion-icon>2</ion-col>
-  </ion-row>
-</ion-item>
-  </ion-item><ion-item>
-    <ion-thumbnail item-left>
-      <img src="assets/img/Ester.png">
-    </ion-thumbnail>
-    <h2>Amy Calfulaf O</h2>
-    <p>Andres Calfulaf P</p>
-    <p>Jacqueline Obando D</p>
-    <ion-item>
-      <ion-row>
-    <ion-col col-4><ion-icon name="md-checkmark" item-left></ion-icon></ion-col>
+    <ion-col col-4><ion-icon name="md-checkmark" (tap)="cambiarEstado(item)" item-left></ion-icon></ion-col>
     <ion-col col-4> <ion-icon name="md-call" isActive="false" item-left></ion-icon>1</ion-col>
     <ion-col col-4><ion-icon name="md-call" isActive="true" item-left></ion-icon>2</ion-col>
   </ion-row>
 </ion-item>
   </ion-item>
-
 </ion-list>
 </div>
 </ion-content>
